@@ -1,2 +1,2 @@
-# js-homework-template
-template for homework
+# js-homework
+
