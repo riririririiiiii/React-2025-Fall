@@ -30,7 +30,7 @@ export default function AboutUs() {
             </div>
             <div className="info-row">
               <h4>Education:</h4>
-              <p>Kazakh-British Technical University, Bachelor of Information Systems</p>
+              <p>Kazakh-British Technical University</p>
             </div>
 
             <div className="info-row">
@@ -56,3 +56,4 @@ export default function AboutUs() {
     </section >
   );
 }
+
