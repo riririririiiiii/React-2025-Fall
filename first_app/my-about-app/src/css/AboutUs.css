@@ -20,7 +20,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  background: #fff
+  
+  background: url("../assets/bg.jpeg") no-repeat center center/cover;
 }
 
 .about-title {
@@ -117,4 +118,5 @@ body {
   margin: 5px 0 0;
   font-size: 1.7rem;
   color: #444
+
 }
