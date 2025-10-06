@@ -1,0 +1,81 @@
+.card {
+  background: linear-gradient(180deg, #fffdf8, #fef7f1);
+  border: 3px solid #ffd9e8;
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(255, 185, 220, 0.35);
+  max-width: 65%;
+  margin: 60px auto;
+  font-family: "Quicksand", "Segoe UI", sans-serif;
+  color: #3c2f2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(255, 175, 210, 0.45);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 50px 60px;
+}
+
+.card-poster {
+  width: 420px;
+  height: 580px;
+  border-radius: 25px;
+  border: 3px solid #ffd4e8;
+  box-shadow: 0 12px 25px rgba(255, 180, 210, 0.4);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-poster:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 35px rgba(255, 160, 200, 0.5);
+}
+
+.card-info {
+  flex: 1;
+  font-size: 1.6rem;
+  padding-top: 20px;
+}
+
+.card-info h2 {
+  font-size: 3rem;
+  color: #ff85c1;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(255, 160, 200, 0.3);
+}
+
+.card-original {
+  color: #7c6a75;
+  margin-bottom: 25px;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.card-info p {
+  margin: 12px 0;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.card-description {
+  padding: 40px 60px;
+  text-align: justify;
+  background-color: #fff3f9;
+  border-top: 2px solid #ffd6e7;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #45373b;
+}
