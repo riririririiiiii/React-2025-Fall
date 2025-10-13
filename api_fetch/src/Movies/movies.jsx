@@ -5,13 +5,18 @@ import "./movies.css";
 export default function MoviesList() {
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
     async function loadMovies() {
         const res = await fetch("https://ghibliapi.vercel.app/films");
         const data = await res.json();
         setMovies(data);
     }
-
+    
+    const filteredMovies = movies.filter(movie =>
+        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    
     if (selectedMovie) {
         return (
             <div className="movies-container">
@@ -31,9 +36,20 @@ export default function MoviesList() {
             <button className="load-btn" onClick={loadMovies}>
                 Load movies
             </button>
-
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Search movies..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                {searchTerm && (
+                    <button className="search-btn"
+                    onClick={() => setSearchTerm("")}>Clear</button>
+                )}
+            </div>
             <ul className="movies-list">
-                {movies.map((movie) => (
+                 {filteredMovies.map((movie) => (
                     <li
                         key={movie.id}
                         onClick={() => setSelectedMovie(movie)}
@@ -46,3 +62,4 @@ export default function MoviesList() {
         </div>
     );
 }
+
