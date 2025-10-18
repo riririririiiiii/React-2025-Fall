@@ -13,10 +13,15 @@ export default function MoviesList() {
         setMovies(data);
     }
     
+    //добавляеи хук useEffect
+    useEffect(() => {
+        loadMovies();
+    }, []);
+
     const filteredMovies = movies.filter(movie =>
         movie.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    
+
     if (selectedMovie) {
         return (
             <div className="movies-container">
@@ -45,11 +50,11 @@ export default function MoviesList() {
                 />
                 {searchTerm && (
                     <button className="search-btn"
-                    onClick={() => setSearchTerm("")}>Clear</button>
+                        onClick={() => setSearchTerm("")}>Clear</button>
                 )}
             </div>
             <ul className="movies-list">
-                 {filteredMovies.map((movie) => (
+                {filteredMovies.map((movie) => (
                     <li
                         key={movie.id}
                         onClick={() => setSelectedMovie(movie)}
