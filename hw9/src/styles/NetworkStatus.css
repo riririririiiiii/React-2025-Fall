@@ -1,0 +1,42 @@
+.network-status {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  animation: slideDown 0.3s ease-out;
+}
+
+.network-status.online {
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.network-status.offline {
+  background: linear-gradient(90deg, #ff9800, #f57c00);
+  color: white;
+}
+
+.network-status-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.network-icon {
+  font-size: 2rem;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
